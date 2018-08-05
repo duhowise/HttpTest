@@ -10,7 +10,7 @@ namespace WEbTest.Controllers
 		[HttpGet][Route("getmoney")]public async Task<IHttpActionResult> GetMoney()
 		{
 			var client = new HttpClient();
-			var requestur = "http://goamlmiddlewareapi.azurewebsites.net/api/countries/WISE";
+			var requestur = "http://someapi/api/countries/WISE";
 			var request = await client.GetAsync(requestur);
 			var result = new Country();
 			if (request.IsSuccessStatusCode)
